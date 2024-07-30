@@ -10,6 +10,7 @@ import SwiftUI
 struct topicView: View {
     
     @State public var activeTopic: String
+    // Articles "database"
     @State public var articles = [
         ["title": "Water article title",
          "topic": "water",
