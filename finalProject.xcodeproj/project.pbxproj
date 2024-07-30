@@ -11,6 +11,7 @@
 		BD0987452C54109500AEAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0987442C54109500AEAD99 /* ContentView.swift */; };
 		BD0987472C54109600AEAD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0987462C54109600AEAD99 /* Assets.xcassets */; };
 		BD09874A2C54109600AEAD99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0987492C54109600AEAD99 /* Preview Assets.xcassets */; };
+		BDE5E9812C5956A20020AF11 /* topicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5E9802C5956A20020AF11 /* topicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BD0987442C54109500AEAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD0987462C54109600AEAD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD0987492C54109600AEAD99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDE5E9802C5956A20020AF11 /* topicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				BD0987422C54109500AEAD99 /* finalProjectApp.swift */,
 				BD0987442C54109500AEAD99 /* ContentView.swift */,
+				BDE5E9802C5956A20020AF11 /* topicView.swift */,
 				BD0987462C54109600AEAD99 /* Assets.xcassets */,
 				BD0987482C54109600AEAD99 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE5E9812C5956A20020AF11 /* topicView.swift in Sources */,
 				BD0987452C54109500AEAD99 /* ContentView.swift in Sources */,
 				BD0987432C54109500AEAD99 /* finalProjectApp.swift in Sources */,
 			);

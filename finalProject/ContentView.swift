@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Group 5 final project")
-        }
-        .padding()
-    }
+        
+        NavigationStack {
+            
+            ScrollView {
+                
+                HStack {
+                    
+                    NavigationLink(destination: topicView(activeTopic: "deforestation")) {
+                        Text("Deforestation")
+                    }
+                    NavigationLink(destination: topicView(activeTopic: "water")) {
+                        Text("Water")
+                    }
+                    NavigationLink(destination: topicView(activeTopic: "plastic")) {
+                        Text("Plastic")
+                    }
+                    
+                } // HStack
+            
+            } // ScrollView
+            
+        } // NavigationStack
+        
+    } // Body
 }
 
 #Preview {
