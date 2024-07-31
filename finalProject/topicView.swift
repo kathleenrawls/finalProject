@@ -64,17 +64,38 @@ struct topicView: View {
             print(articles[2]["topic"]!)
         }
         
-        ScrollView {
+        NavigationView {
             
-            VStack {
+            ScrollView {
                 
-                ForEach(articles.filter { a in a["topic"]! == activeTopic}, id: \.self) {article in
-                    Text(article["title"]!)
-                } // ForEach
+                VStack {
+                    
+                    ForEach(articles.filter { a in a["topic"]! == activeTopic}, id: \.self) {article in
+                        
+                        HStack {
+                            
+                            Image(article["imgSrc"]!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 100, height: 100)
+                                .clipShape(Rectangle())
+                            
+                            Text(article["title"]!)
+                                .frame(width: 210)
+                            
+                        }
+                        .frame(width: 350, height: 120)
+                        .background(Rectangle()
+                            .foregroundColor(.green))
+                        
+                    } // ForEach
+                    
+                } // VStack
                 
-            } // VStack
+            } // ScrollView
             
-        } // ScrollView
+        } // NavigationView
+        
         
     }
 }
