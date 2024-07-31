@@ -30,72 +30,98 @@ struct topicView: View {
     
     var body: some View {
         
-        NavigationStack {
+        ZStack {
             
-            ScrollView {
+            Color(.purple)
+                .ignoresSafeArea()
+            
+            NavigationStack {
                 
-                HStack {
+                ScrollView {
                     
-                    NavigationLink(destination: topicView(activeTopic: "deforestation")) {
-                        Button("Deforestation") {
-                            activeTopic = "deforestation"
+                    HStack {
+                        
+                        NavigationLink(destination: topicView(activeTopic: "deforestation")) {
+                            Button("Deforestation") {
+                                activeTopic = "deforestation"
+                            }
                         }
-                    }
-                    NavigationLink(destination: topicView(activeTopic: "water")) {
-                        Button("Water") {
-                            activeTopic = "water"
+                        NavigationLink(destination: topicView(activeTopic: "water")) {
+                            Button("Water") {
+                                activeTopic = "water"
+                            }
                         }
-                    }
-                    NavigationLink(destination: topicView(activeTopic: "plastic")) {
-                        Button("Plastic") {
-                            activeTopic = "plastic"
+                        NavigationLink(destination: topicView(activeTopic: "plastic")) {
+                            Button("Plastic") {
+                                activeTopic = "plastic"
+                            }
                         }
-                    }
+                        
+                    } // HStack
                     
-                } // HStack
-            
-            } // ScrollView
-            
-        } // NavigationStack
-        
-        
-        Text(activeTopic)
-        Button("test") {
-            print(articles[2]["topic"]!)
-        }
-        
-        NavigationView {
-            
-            ScrollView {
+                } // ScrollView
+                .frame(width: 350, height: 30)
                 
-                VStack {
+                VStack(alignment: .leading) {
                     
-                    ForEach(articles.filter { a in a["topic"]! == activeTopic}, id: \.self) {article in
+                    ZStack {
                         
-                        HStack {
-                            
-                            Image(article["imgSrc"]!)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 100, height: 100)
-                                .clipShape(Rectangle())
-                            
-                            Text(article["title"]!)
-                                .frame(width: 210)
-                            
-                        }
-                        .frame(width: 350, height: 120)
-                        .background(Rectangle()
-                            .foregroundColor(.green))
+                        Image("plasticBottles")
+                            .resizable()
+                            .frame(width: 350, height: 100)
+                            .cornerRadius(13)
+                        Text(activeTopic.capitalized)
+                            .font(.largeTitle)
                         
-                    } // ForEach
+                    }
+                    .padding(15.0) // ZStack
+                    
+                    Text("Articles")
+                        .font(.headline)
+                        .padding(.leading, 14.0)
+                    
+                    ScrollView {
+                        
+                        VStack {
+                            
+                            ForEach(articles.indices.filter { a in articles[a]["topic"]! == activeTopic}, id: \.self) {article in
+                                
+                                HStack {
+                                    
+                                    Image(articles[article]["imgSrc"]!)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 100, height: 100)
+                                        .clipShape(Rectangle())
+                                        .cornerRadius(13)
+                                    
+                                    NavigationLink(destination: articleView(article: $articles[article])) {
+                                        Text(articles[article]["title"]!)
+                                            .foregroundColor(Color.black)
+                                            .multilineTextAlignment(.leading)
+                                    }
+                                    .frame(width: 220)
+                                    
+                                } // HStack
+                                .frame(width: 350, height: 120)
+                                .background(Rectangle()
+                                    .foregroundColor(Color(red: 217/255, green: 217/255, blue: 217/255)))
+                                .cornerRadius(13)
+                                .padding(7)
+                                .shadow(color: .black.opacity(0.5), radius: 4, x: 2, y: 4)
+                                
+                            } // ForEach
+                            
+                        } // VStack
+                        
+                    } // ScrollView
+                    .frame(width: 380)
                     
                 } // VStack
                 
-            } // ScrollView
+            } // NavigationStack
             
-        } // NavigationView
-        
+        } // ZStack
         
     }
 }
