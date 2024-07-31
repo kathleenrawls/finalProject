@@ -12,11 +12,11 @@ struct topicView: View {
     @State public var activeTopic: String
     // Articles "database"
     @State public var articles = [
-        ["title": "Water article title",
+        ["title": "3 Small Ways You Can Save Water",
          "topic": "water",
-         "imgSrc": "",
-         "author": "Sustainable Home",
-         "content": "text"],
+         "imgSrc": "oceanWater",
+         "author": "Angela from Sustainable Home",
+         "content": "\tDid you know that roughly 8 trillion liters of water are wasted worldwide yearly? Yet, 3 billion people globally live in conditions of water scarcity. Water is one of our most precious resources, but we waste it every day. Here are small things you can do at home to help reduce your water waste: \n\n\t1) Collect your shower water. When you’re about to shower and you’re waiting for the shower to turn warm, what do you do? Are you letting it run? If so, you can try collecting that water for other uses; such as flushing the toilet or watering your garden. \n\t2) Regularly check your home for leaks. This will save your water bill and also the environment. A leaky faucet can waste up to 140 gallons of water a week. Sink leaks, toilet leaks, faucet leaks, etc. Check them all! Save your water and save your wallet!\n\t3) Only run your washing machine when it's full. Washing machines will typically use the same amount of water no matter the load, so make sure you are loading as much clothing as possible. Washing machines on average use about 35-50 gallons of water per wash, so make sure you are using it as efficiently as possible!"],
         ["title": "5 Craft Ideas to Reuse Plastic Bottles",
          "topic": "plastic",
          "imgSrc": "plasticBottles",
