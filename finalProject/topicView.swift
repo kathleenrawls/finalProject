@@ -30,98 +30,105 @@ struct topicView: View {
     
     var body: some View {
         
-        ZStack {
+        NavigationStack {
             
-            Color(.purple)
-                .ignoresSafeArea()
-            
-            NavigationStack {
+            ZStack {
                 
-                ScrollView {
-                    
-                    HStack {
-                        
-                        NavigationLink(destination: topicView(activeTopic: "deforestation")) {
-                            Button("Deforestation") {
-                                activeTopic = "deforestation"
-                            }
-                        }
-                        NavigationLink(destination: topicView(activeTopic: "water")) {
-                            Button("Water") {
-                                activeTopic = "water"
-                            }
-                        }
-                        NavigationLink(destination: topicView(activeTopic: "plastic")) {
-                            Button("Plastic") {
-                                activeTopic = "plastic"
-                            }
-                        }
-                        
-                    } // HStack
-                    
-                } // ScrollView
-                .frame(width: 350, height: 30)
+                Color(red:239/255, green:236/255, blue:230/255)
+                    .ignoresSafeArea()
                 
-                VStack(alignment: .leading) {
-                    
-                    ZStack {
-                        
-                        Image("plasticBottles")
-                            .resizable()
-                            .frame(width: 350, height: 100)
-                            .cornerRadius(13)
-                        Text(activeTopic.capitalized)
-                            .font(.largeTitle)
-                        
-                    }
-                    .padding(15.0) // ZStack
-                    
-                    Text("Articles")
-                        .font(.headline)
-                        .padding(.leading, 14.0)
+                VStack {
                     
                     ScrollView {
                         
-                        VStack {
+                        HStack {
                             
-                            ForEach(articles.indices.filter { a in articles[a]["topic"]! == activeTopic}, id: \.self) {article in
-                                
-                                HStack {
-                                    
-                                    Image(articles[article]["imgSrc"]!)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 100, height: 100)
-                                        .clipShape(Rectangle())
-                                        .cornerRadius(13)
-                                    
-                                    NavigationLink(destination: articleView(article: $articles[article])) {
-                                        Text(articles[article]["title"]!)
-                                            .foregroundColor(Color.black)
-                                            .multilineTextAlignment(.leading)
-                                    }
-                                    .frame(width: 220)
-                                    
-                                } // HStack
-                                .frame(width: 350, height: 120)
-                                .background(Rectangle()
-                                    .foregroundColor(Color(red: 217/255, green: 217/255, blue: 217/255)))
-                                .cornerRadius(13)
-                                .padding(7)
-                                .shadow(color: .black.opacity(0.5), radius: 4, x: 2, y: 4)
-                                
-                            } // ForEach
+                            NavigationLink(destination: topicView(activeTopic: "deforestation")) {
+                                Button("Deforestation") {
+                                    activeTopic = "deforestation"
+                                }
+                                .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                            }
+                            NavigationLink(destination: topicView(activeTopic: "water")) {
+                                Button("Water") {
+                                    activeTopic = "water"
+                                }
+                                .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                            }
+                            NavigationLink(destination: topicView(activeTopic: "plastic")) {
+                                Button("Plastic") {
+                                    activeTopic = "plastic"
+                                }
+                                .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                            }
                             
-                        } // VStack
+                        } // HStack
                         
                     } // ScrollView
-                    .frame(width: 380)
+                    .frame(width: 350, height: 30)
+                    
+                    VStack(alignment: .leading) {
+                        
+                        ZStack {
+                            
+                            Image("plasticBottles")
+                                .resizable()
+                                .frame(width: 350, height: 100)
+                                .cornerRadius(13)
+                            Text(activeTopic.capitalized)
+                                .font(.largeTitle)
+                            
+                        }
+                        .padding(15.0) // ZStack
+                        
+                        Text("Articles")
+                            .font(.headline)
+                            .padding(.leading, 14.0)
+                        
+                        ScrollView {
+                            
+                            VStack {
+                                
+                                ForEach(articles.indices.filter { a in articles[a]["topic"]! == activeTopic}, id: \.self) {article in
+                                    
+                                    HStack {
+                                        
+                                        Image(articles[article]["imgSrc"]!)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 100, height: 100)
+                                            .clipShape(Rectangle())
+                                            .cornerRadius(13)
+                                        
+                                        NavigationLink(destination: articleView(article: $articles[article])) {
+                                            Text(articles[article]["title"]!)
+                                                .foregroundColor(Color.black)
+                                                .multilineTextAlignment(.leading)
+                                        }
+                                        .frame(width: 220)
+                                        
+                                    } // HStack
+                                    .frame(width: 350, height: 120)
+                                    .background(Rectangle()
+                                        .foregroundColor(Color(red: 217/255, green: 217/255, blue: 217/255)))
+                                    .cornerRadius(13)
+                                    .padding(7)
+                                    .shadow(color: .black.opacity(0.5), radius: 4, x: 2, y: 4)
+                                    
+                                } // ForEach
+                                
+                            } // VStack
+                            
+                        } // ScrollView
+                        .frame(width: 380)
+                        
+                    } // VStack
                     
                 } // VStack
                 
-            } // NavigationStack
+            } // ZStack
             
-        } // ZStack
+        } // NavigationStack
         
     }
 }

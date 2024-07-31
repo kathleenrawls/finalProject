@@ -13,37 +13,45 @@ struct articleView: View {
     
     var body: some View {
         
-        ScrollView {
+        ZStack {
             
-            VStack(spacing: 20) {
+            Color(red:239/255, green:236/255, blue:230/255)
+                .ignoresSafeArea()
+            
+            ScrollView {
                 
-                Image(article["imgSrc"]!)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 200)
-                    .clipShape(Rectangle())
-                
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(spacing: 20) {
                     
-                    Text(article["title"]!)
-                        .font(.largeTitle)
+                    Image(article["imgSrc"]!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 200)
+                        .clipShape(Rectangle())
                     
-                    Text(article["topic"]!)
-                        .font(.headline)
-                    
-                    Text("Written by " + article["author"]!)
-                        .font(.subheadline)
-                        .fontWeight(.light)
-                    
-                    Text(article["content"]!)
-                        .font(.body)
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text(article["title"]!)
+                            .font(.largeTitle)
+                        
+                        Text(article["topic"]!)
+                            .font(.headline)
+                        
+                        Text("Written by " + article["author"]!)
+                            .font(.subheadline)
+                            .fontWeight(.light)
+                            .padding(.bottom, 20)
+                        
+                        Text(article["content"]!)
+                            .font(.body)
+                        
+                    } // VStack
                     
                 } // VStack
                 
-            } // VStack
+            } // ScrollView
+            .frame(width: 330, height: 670)
             
-        } // ScrollView
-        .frame(width: 330, height: 670)
+        } // ZStack
         
     } // Body
 }
