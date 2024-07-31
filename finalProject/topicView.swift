@@ -71,12 +71,13 @@ struct topicView: View {
                         
                         ZStack {
                             
-                            Image("plasticBottles")
+                            Image(activeTopic)
                                 .resizable()
                                 .frame(width: 350, height: 100)
                                 .cornerRadius(13)
                             Text(activeTopic.capitalized)
                                 .font(.largeTitle)
+                                .foregroundColor(Color.white)
                             
                         }
                         .padding(15.0) // ZStack
