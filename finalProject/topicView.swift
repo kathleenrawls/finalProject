@@ -39,7 +39,7 @@ struct topicView: View {
                 
                 VStack {
                     
-                    HStack(spacing:70) {
+                    HStack(spacing:30) {
                         
                         NavigationLink(destination: ContentView()) {
                             Text("⏏")
@@ -47,11 +47,20 @@ struct topicView: View {
                         }
                         
                         Text("Sustainable Home")
-                            .font(.title3)
+                            .font(.custom("groovyfont", size: 10))
                         
-                        NavigationLink(destination: ContentView()) {
-                            Text("+")
-                                .foregroundColor(Color.black)
+                        HStack {
+                            
+                            NavigationLink(destination: quizView()) {
+                                Text("⌕")
+                                    .foregroundColor(.black)
+                            }
+                            
+                            NavigationLink(destination: addArticleView()) {
+                                Text("+")
+                                    .foregroundColor(Color.black)
+                            }
+                            
                         }
                         
                     } // HStack
