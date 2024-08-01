@@ -107,14 +107,15 @@ struct topicView: View {
                                 .frame(width: 350, height: 100)
                                 .cornerRadius(13)
                             Text(activeTopic.capitalized)
-                                .font(.largeTitle)
+                                .font(.custom("groovyfont", size: 15))
                                 .foregroundColor(Color.white)
                             
                         }
                         .padding(15.0) // ZStack
                         
                         Text("Articles")
-                            .font(.headline)
+                            .font(.custom("groovyfont", size: 10))
+                            .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
                             .padding(.leading, 14.0)
                         
                         ScrollView {
@@ -137,6 +138,7 @@ struct topicView: View {
                                             Text(articles[article]["title"]!)
                                                 .foregroundColor(Color.black)
                                                 .multilineTextAlignment(.leading)
+                                                .font(.custom("merriweather", size: 15))
                                         }
                                         .frame(width: 220)
                                         

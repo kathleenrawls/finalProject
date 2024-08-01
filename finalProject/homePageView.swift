@@ -21,11 +21,63 @@ struct homePageView: View {
                 
                 VStack {
                     
-                    HStack {
-                        Text("Deforestation")
-                        Text("Plastics")
-                        Text("Water")
+                    HStack(spacing:30) {
+                        
+                        NavigationLink(destination: homePageView()) {
+                            Text("⏏")
+                                .foregroundColor(Color.black)
+                        }
+                        
+                        Text("Sustainable Home")
+                            .font(.custom("groovyfont", size: 10))
+                        
+                        HStack {
+                            
+                            NavigationLink(destination: quizView()) {
+                                Text("⌕")
+                                    .foregroundColor(.black)
+                            }
+                            
+                            NavigationLink(destination: addArticleView()) {
+                                Text("+")
+                                    .foregroundColor(Color.black)
+                            }
+                            
+                        }
+                        
+                    } // HStack
+                    .frame(width: 350, height: 40)
+                    .background(Rectangle()
+                        .foregroundColor(Color(red: 120/255, green: 145/255, blue: 112/255)))
+                    .cornerRadius(13)
+                    
+                    ScrollView (.horizontal) {
+                        
+                        HStack (spacing: 20) {
+                            
+                            NavigationLink(destination: topicView(activeTopic: "deforestation")) {
+                                Text("Deforestation")
+                            }
+                                .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                                
+
+                            NavigationLink(destination: topicView(activeTopic: "water")) {
+                                Text("Water")
+                            }
+                                .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                            
+                    NavigationLink(destination: topicView(activeTopic: "plastic")) {
+                        Text("Plastic")
                     }
+                                .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                            
+                            
+                        } // HStack
+                        
+                    } // ScrollView
+                    .frame(width: 350, height: 30)
+                    
+                   
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                     
                     Text("Welcome, (person's name)")

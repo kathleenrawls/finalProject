@@ -31,18 +31,18 @@ struct articleView: View {
                     VStack(alignment: .leading, spacing: 10) {
                         
                         Text(article["title"]!)
-                            .font(.largeTitle)
+                            .font(.custom("merriweather", size: 30))
                         
                         Text(article["topic"]!)
-                            .font(.headline)
+                            .font(.custom("merriweather", size: 20))
                         
                         Text("Written by " + article["author"]!)
-                            .font(.subheadline)
+                            .font(.custom("merriweather", size: 15))
                             .fontWeight(.light)
                             .padding(.bottom, 20)
                         
                         Text(article["content"]!)
-                            .font(.body)
+                            .font(.custom("merriweather", size: 15))
                         
                     } // VStack
                     
