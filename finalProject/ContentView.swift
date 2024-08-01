@@ -41,4 +41,5 @@ struct ContentView: View {
 }
 //for the merriweather font it is .font(.custom("Merriweather-Regular", size: 15)) but substitute the 15 for any number you want
 //for the groovy font it is .font(.custom("groovyfont", size: 15)) but substitute the 15 for any number you want
+//testing
 
