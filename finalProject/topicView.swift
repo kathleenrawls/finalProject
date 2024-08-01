@@ -69,6 +69,7 @@ struct topicView: View {
                                     activeTopic = "deforestation"
                                 }
                                 .foregroundColor(Color(red:110/255, green:101/255, blue:93/255))
+                                
                             }
                             NavigationLink(destination: topicView(activeTopic: "water")) {
                                 Button("Water") {

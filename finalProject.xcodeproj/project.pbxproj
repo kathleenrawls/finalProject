@@ -13,6 +13,12 @@
 		BD09874A2C54109600AEAD99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0987492C54109600AEAD99 /* Preview Assets.xcassets */; };
 		BD29D2292C5A91FC00125B85 /* articleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29D2282C5A91FC00125B85 /* articleView.swift */; };
 		BDE5E9812C5956A20020AF11 /* topicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5E9802C5956A20020AF11 /* topicView.swift */; };
+		D3767F142C5BDAE400C3D99C /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3767F132C5BDAE400C3D99C /* Merriweather-Regular.ttf */; };
+		D3767F162C5BDAF700C3D99C /* groovy-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3767F152C5BDAF700C3D99C /* groovy-font.ttf */; };
+		D3767F192C5BDC1500C3D99C /* quizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F182C5BDC1500C3D99C /* quizView.swift */; };
+		D3767F1B2C5BDDF800C3D99C /* questionone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F1A2C5BDDF800C3D99C /* questionone.swift */; };
+		D3767F1D2C5BDE0500C3D99C /* questiontwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F1C2C5BDE0500C3D99C /* questiontwo.swift */; };
+		D3767F1F2C5BDE1100C3D99C /* questionthree.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F1E2C5BDE1100C3D99C /* questionthree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,13 @@
 		BD0987492C54109600AEAD99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BD29D2282C5A91FC00125B85 /* articleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = articleView.swift; sourceTree = "<group>"; };
 		BDE5E9802C5956A20020AF11 /* topicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicView.swift; sourceTree = "<group>"; };
+		D3767F132C5BDAE400C3D99C /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "../../Merriweather/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		D3767F152C5BDAF700C3D99C /* groovy-font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "groovy-font.ttf"; path = "../../groovy_font/groovy-font.ttf"; sourceTree = "<group>"; };
+		D3767F172C5BDB0A00C3D99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3767F182C5BDC1500C3D99C /* quizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizView.swift; sourceTree = "<group>"; };
+		D3767F1A2C5BDDF800C3D99C /* questionone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionone.swift; sourceTree = "<group>"; };
+		D3767F1C2C5BDE0500C3D99C /* questiontwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questiontwo.swift; sourceTree = "<group>"; };
+		D3767F1E2C5BDE1100C3D99C /* questionthree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionthree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +68,18 @@
 		BD0987412C54109500AEAD99 /* finalProject */ = {
 			isa = PBXGroup;
 			children = (
+				D3767F172C5BDB0A00C3D99C /* Info.plist */,
 				BD0987422C54109500AEAD99 /* finalProjectApp.swift */,
 				BD0987442C54109500AEAD99 /* ContentView.swift */,
 				BDE5E9802C5956A20020AF11 /* topicView.swift */,
+				D3767F182C5BDC1500C3D99C /* quizView.swift */,
+				D3767F1A2C5BDDF800C3D99C /* questionone.swift */,
+				D3767F1C2C5BDE0500C3D99C /* questiontwo.swift */,
+				D3767F1E2C5BDE1100C3D99C /* questionthree.swift */,
 				BD29D2282C5A91FC00125B85 /* articleView.swift */,
 				BD0987462C54109600AEAD99 /* Assets.xcassets */,
+				D3767F132C5BDAE400C3D99C /* Merriweather-Regular.ttf */,
+				D3767F152C5BDAF700C3D99C /* groovy-font.ttf */,
 				BD0987482C54109600AEAD99 /* Preview Content */,
 			);
 			path = finalProject;
@@ -132,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD09874A2C54109600AEAD99 /* Preview Assets.xcassets in Resources */,
+				D3767F162C5BDAF700C3D99C /* groovy-font.ttf in Resources */,
+				D3767F142C5BDAE400C3D99C /* Merriweather-Regular.ttf in Resources */,
 				BD0987472C54109600AEAD99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,8 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE5E9812C5956A20020AF11 /* topicView.swift in Sources */,
+				D3767F1D2C5BDE0500C3D99C /* questiontwo.swift in Sources */,
 				BD0987452C54109500AEAD99 /* ContentView.swift in Sources */,
+				D3767F192C5BDC1500C3D99C /* quizView.swift in Sources */,
 				BD0987432C54109500AEAD99 /* finalProjectApp.swift in Sources */,
+				D3767F1B2C5BDDF800C3D99C /* questionone.swift in Sources */,
+				D3767F1F2C5BDE1100C3D99C /* questionthree.swift in Sources */,
 				BD29D2292C5A91FC00125B85 /* articleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +308,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"finalProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = finalProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -310,6 +337,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"finalProject/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = finalProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
