@@ -13,9 +13,9 @@ struct ContentView: View {
         
         NavigationStack {
             
-            ScrollView {
+            ScrollView (.horizontal) {
                 
-                HStack {
+                HStack (spacing: 20) {
                     
                     NavigationLink(destination: topicView(activeTopic: "deforestation")) {
                         Text("Deforestation")

@@ -39,9 +39,30 @@ struct topicView: View {
                 
                 VStack {
                     
-                    ScrollView {
+                    HStack(spacing:70) {
                         
-                        HStack {
+                        NavigationLink(destination: ContentView()) {
+                            Text("⏏")
+                                .foregroundColor(Color.black)
+                        }
+                        
+                        Text("Sustainable Home")
+                            .font(.title3)
+                        
+                        NavigationLink(destination: ContentView()) {
+                            Text("+")
+                                .foregroundColor(Color.black)
+                        }
+                        
+                    } // HStack
+                    .frame(width: 350, height: 40)
+                    .background(Rectangle()
+                        .foregroundColor(Color(red: 120/255, green: 145/255, blue: 112/255)))
+                    .cornerRadius(13)
+                    
+                    ScrollView (.horizontal) {
+                        
+                        HStack (spacing: 20) {
                             
                             NavigationLink(destination: topicView(activeTopic: "deforestation")) {
                                 Button("Deforestation") {
@@ -100,6 +121,7 @@ struct topicView: View {
                                             .frame(width: 100, height: 100)
                                             .clipShape(Rectangle())
                                             .cornerRadius(13)
+                                            .shadow(color: .black.opacity(0.5), radius: 3, x: 2, y: 4)
                                         
                                         NavigationLink(destination: articleView(article: $articles[article])) {
                                             Text(articles[article]["title"]!)
