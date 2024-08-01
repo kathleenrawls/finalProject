@@ -41,7 +41,7 @@ struct topicView: View {
                     
                     HStack(spacing:30) {
                         
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: homePageView()) {
                             Text("⏏")
                                 .foregroundColor(Color.black)
                         }

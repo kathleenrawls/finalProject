@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FEDEFE52C5C044C0033B2A6 /* groovy-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FEDEFE42C5C044C0033B2A6 /* groovy-font.ttf */; };
+		2FEDEFE72C5C045F0033B2A6 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FEDEFE62C5C045F0033B2A6 /* Merriweather-Regular.ttf */; };
+		2FEDEFE92C5C07BA0033B2A6 /* homePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEDEFE82C5C07BA0033B2A6 /* homePageView.swift */; };
 		BD0987432C54109500AEAD99 /* finalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0987422C54109500AEAD99 /* finalProjectApp.swift */; };
 		BD0987452C54109500AEAD99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0987442C54109500AEAD99 /* ContentView.swift */; };
 		BD0987472C54109600AEAD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0987462C54109600AEAD99 /* Assets.xcassets */; };
@@ -14,8 +17,6 @@
 		BD29D2292C5A91FC00125B85 /* articleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29D2282C5A91FC00125B85 /* articleView.swift */; };
 		BD29E9EF2C5BFE0800D59995 /* addArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29E9EE2C5BFE0800D59995 /* addArticleView.swift */; };
 		BDE5E9812C5956A20020AF11 /* topicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5E9802C5956A20020AF11 /* topicView.swift */; };
-		D3767F142C5BDAE400C3D99C /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3767F132C5BDAE400C3D99C /* Merriweather-Regular.ttf */; };
-		D3767F162C5BDAF700C3D99C /* groovy-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3767F152C5BDAF700C3D99C /* groovy-font.ttf */; };
 		D3767F192C5BDC1500C3D99C /* quizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F182C5BDC1500C3D99C /* quizView.swift */; };
 		D3767F1B2C5BDDF800C3D99C /* questionone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F1A2C5BDDF800C3D99C /* questionone.swift */; };
 		D3767F1D2C5BDE0500C3D99C /* questiontwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3767F1C2C5BDE0500C3D99C /* questiontwo.swift */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FEDEFE42C5C044C0033B2A6 /* groovy-font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "groovy-font.ttf"; sourceTree = "<group>"; };
+		2FEDEFE62C5C045F0033B2A6 /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		2FEDEFE82C5C07BA0033B2A6 /* homePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageView.swift; sourceTree = "<group>"; };
 		BD09873F2C54109500AEAD99 /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0987422C54109500AEAD99 /* finalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalProjectApp.swift; sourceTree = "<group>"; };
 		BD0987442C54109500AEAD99 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,8 +35,6 @@
 		BD29D2282C5A91FC00125B85 /* articleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = articleView.swift; sourceTree = "<group>"; };
 		BD29E9EE2C5BFE0800D59995 /* addArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addArticleView.swift; sourceTree = "<group>"; };
 		BDE5E9802C5956A20020AF11 /* topicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicView.swift; sourceTree = "<group>"; };
-		D3767F132C5BDAE400C3D99C /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Merriweather-Regular.ttf"; path = "../../Merriweather/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
-		D3767F152C5BDAF700C3D99C /* groovy-font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "groovy-font.ttf"; path = "../../groovy_font/groovy-font.ttf"; sourceTree = "<group>"; };
 		D3767F172C5BDB0A00C3D99C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D3767F182C5BDC1500C3D99C /* quizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizView.swift; sourceTree = "<group>"; };
 		D3767F1A2C5BDDF800C3D99C /* questionone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionone.swift; sourceTree = "<group>"; };
@@ -75,14 +77,15 @@
 				BD0987442C54109500AEAD99 /* ContentView.swift */,
 				BDE5E9802C5956A20020AF11 /* topicView.swift */,
 				BD29E9EE2C5BFE0800D59995 /* addArticleView.swift */,
+				2FEDEFE82C5C07BA0033B2A6 /* homePageView.swift */,
 				D3767F182C5BDC1500C3D99C /* quizView.swift */,
 				D3767F1A2C5BDDF800C3D99C /* questionone.swift */,
 				D3767F1C2C5BDE0500C3D99C /* questiontwo.swift */,
 				D3767F1E2C5BDE1100C3D99C /* questionthree.swift */,
-				BD29D2282C5A91FC00125B85 /* articleView.swift */,
 				BD0987462C54109600AEAD99 /* Assets.xcassets */,
-				D3767F132C5BDAE400C3D99C /* Merriweather-Regular.ttf */,
-				D3767F152C5BDAF700C3D99C /* groovy-font.ttf */,
+				BD29D2282C5A91FC00125B85 /* articleView.swift */,
+				2FEDEFE42C5C044C0033B2A6 /* groovy-font.ttf */,
+				2FEDEFE62C5C045F0033B2A6 /* Merriweather-Regular.ttf */,
 				BD0987482C54109600AEAD99 /* Preview Content */,
 			);
 			path = finalProject;
@@ -155,9 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD09874A2C54109600AEAD99 /* Preview Assets.xcassets in Resources */,
-				D3767F162C5BDAF700C3D99C /* groovy-font.ttf in Resources */,
-				D3767F142C5BDAE400C3D99C /* Merriweather-Regular.ttf in Resources */,
 				BD0987472C54109600AEAD99 /* Assets.xcassets in Resources */,
+				2FEDEFE72C5C045F0033B2A6 /* Merriweather-Regular.ttf in Resources */,
+				2FEDEFE52C5C044C0033B2A6 /* groovy-font.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +175,7 @@
 				D3767F1D2C5BDE0500C3D99C /* questiontwo.swift in Sources */,
 				BD29E9EF2C5BFE0800D59995 /* addArticleView.swift in Sources */,
 				BD0987452C54109500AEAD99 /* ContentView.swift in Sources */,
+				2FEDEFE92C5C07BA0033B2A6 /* homePageView.swift in Sources */,
 				D3767F192C5BDC1500C3D99C /* quizView.swift in Sources */,
 				BD0987432C54109500AEAD99 /* finalProjectApp.swift in Sources */,
 				D3767F1B2C5BDDF800C3D99C /* questionone.swift in Sources */,
