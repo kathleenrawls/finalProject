@@ -25,7 +25,7 @@ struct articleView: View {
                     Image(article["imgSrc"]!)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(height: 200)
+                        .frame(width: 330)
                         .clipShape(Rectangle())
                     
                     VStack(alignment: .leading, spacing: 10) {

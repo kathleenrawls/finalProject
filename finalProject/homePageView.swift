@@ -84,7 +84,7 @@ struct homePageView: View {
                    
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                     
-                    Text("Welcome \(username)")
+                    Text("Welcome, \(username)")
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                         .font(.custom("merriweather", size: 15))
                     
@@ -102,7 +102,7 @@ struct homePageView: View {
                                 .frame(width:175, height:175)
                         }
                     }
-                    NavigationLink(destination: topicView(activeTopic: "plastics")) {
+                    NavigationLink(destination: topicView(activeTopic: "plastic")) {
                         Image("plasticsPic")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
