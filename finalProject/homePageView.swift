@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct homePageView: View {
+    
+    @Binding public var username: String
+    
     var body: some View {
         
-        NavigationStack {
+//        NavigationStack {
             
             ZStack {
                 
@@ -23,7 +26,7 @@ struct homePageView: View {
                     
                     HStack(spacing:30) {
                         
-                        NavigationLink(destination: homePageView()) {
+                        NavigationLink(destination: homePageView(username: $username)) {
                             Text("⏏")
                                 .foregroundColor(Color.black)
                         }
@@ -73,6 +76,7 @@ struct homePageView: View {
                             
                             
                         } // HStack
+                        .font(.custom("merriweather", size: 15))
                         
                     } // ScrollView
                     .frame(width: 350, height: 30)
@@ -80,11 +84,13 @@ struct homePageView: View {
                    
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                     
-                    Text("Welcome, (person's name)")
+                    Text("Welcome \(username)")
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                        .font(.custom("merriweather", size: 15))
                     
                     
                     Text("Topics you might enjoy")
+                        .font(.custom("groovyfont", size: 10))
                     
                     
                     HStack {
@@ -116,14 +122,16 @@ struct homePageView: View {
                 //            .padding(.all, -4.0)
                 //            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
-        }
+//        }
+//        .frame(maxHeight: .infinity)
+        
     }
 }
 
 
 
 #Preview {
-    homePageView()
+    homePageView(username: .constant(""))
 }
 
 //hello there!

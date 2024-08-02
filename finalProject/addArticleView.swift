@@ -26,10 +26,11 @@ struct addArticleView: View {
                 
                 VStack (spacing: 30) {
                     Text("Add a new article")
-                        .font(.title)
+                        .font(.custom("merriweather", size: 30))
                     
                     VStack {
                         PhotosPicker("Select article image", selection: $avatarItem, matching: .images)
+                            .font(.custom("merriweather", size: 15))
                         
                         avatarImage?
                             .resizable()
@@ -55,8 +56,11 @@ struct addArticleView: View {
                     }
                     
                     TextField("Title", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .font(.custom("merriweather", size: 15))
                     TextField("Author", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .font(.custom("merriweather", size: 15))
                     TextField("Content", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                        .font(.custom("merriweather", size: 15))
                     
                     Button("Add Article") {
                         dismiss()
@@ -65,6 +69,7 @@ struct addArticleView: View {
                     .background(Color(red: 120/255, green: 145/255, blue: 112/255))
                     .foregroundStyle(.white)
                     .clipShape(Capsule())
+                    .font(.custom("merriweather", size: 15))
                     
                 } // VStack
                 .frame(width: 350)

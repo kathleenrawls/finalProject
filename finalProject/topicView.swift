@@ -10,6 +10,7 @@ import SwiftUI
 struct topicView: View {
     
     @State public var activeTopic: String
+    @State private var username = ""
     // Articles "database"
     @State public var articles = [
         ["title": "3 Small Ways You Can Save Water",
@@ -51,7 +52,7 @@ struct topicView: View {
     
     var body: some View {
         
-        NavigationStack {
+//        NavigationStack {
             
             ZStack {
                 
@@ -62,7 +63,7 @@ struct topicView: View {
                     
                     HStack(spacing:30) {
                         
-                        NavigationLink(destination: homePageView()) {
+                        NavigationLink(destination: homePageView(username: $username)) {
                             Text("⏏")
                                 .foregroundColor(Color.black)
                         }
@@ -115,6 +116,7 @@ struct topicView: View {
                             }
                             
                         } // HStack
+                        .font(.custom("merriweather", size: 15))
                         
                     } // ScrollView
                     .frame(width: 350, height: 30)
@@ -184,7 +186,7 @@ struct topicView: View {
                 
             } // ZStack
             
-        } // NavigationStack
+//        } // NavigationStack
         
     }
 }

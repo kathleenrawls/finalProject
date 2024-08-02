@@ -10,7 +10,7 @@ import SwiftUI
 
 struct quizView: View {
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
             
             ZStack {
                 Color(red: 239/255, green: 236/255, blue: 230/255)
@@ -40,7 +40,7 @@ struct quizView: View {
                 
             }
             
-        }
+//        }
         
         
     }

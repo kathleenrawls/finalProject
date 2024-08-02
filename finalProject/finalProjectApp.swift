@@ -11,7 +11,7 @@ import SwiftUI
 struct finalProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            homePageView()
+            addNameView()
         }
     }
 }

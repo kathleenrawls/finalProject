@@ -11,7 +11,7 @@ struct questionthree: View {
     @State private var answer = ""
         
         var body: some View {
-            NavigationStack {
+//            NavigationStack {
                 ZStack {
                     Color(red: 239/255, green: 236/255, blue: 230/255)
                         .ignoresSafeArea()
@@ -57,7 +57,7 @@ struct questionthree: View {
                     
                 }
             
-            }
+//            }
 
         }
     }
